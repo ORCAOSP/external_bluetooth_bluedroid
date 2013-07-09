@@ -32,6 +32,11 @@
 
 #include "bt_hci_lib.h"
 
+#ifdef HAS_BDROID_BUILDCFG
+#include "bdroid_buildcfg.h"
+#endif
+
+
 /******************************************************************************
 **  Constants & Macros
 ******************************************************************************/
@@ -63,7 +68,7 @@
 #endif  // (BTHC_LINUX_BASE_POLICY != SCHED_NORMAL)
 
 #ifndef BTHC_USERIAL_READ_MEM_SIZE
-#define BTHC_USERIAL_READ_MEM_SIZE (1024)
+#define BTHC_USERIAL_READ_MEM_SIZE (2048)
 #endif
 
 #ifndef BTSNOOPDISP_INCLUDED
